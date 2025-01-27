@@ -1,0 +1,237 @@
+.dark-mode .home-container h1,
+.dark-mode .home-container h2 {
+  color: white;
+}
+.header-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+  padding: 10px;
+  gap:100px
+}
+/* User List Styles */
+.user-list {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #2f2f2f;
+}
+.dark-mode h1{
+  color: white;
+}
+/* Sorting Controls */
+.sorting-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.sorting-container select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sorting-container label {
+  color: #333;
+  font-weight: bold;
+  margin-right: 5px; 
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 8px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-container button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Toggle Button */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  opacity: 0.8;
+}
+
+/* Message Popup */
+.message-popup {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.message-popup.success {
+  background-color:#155724;
+  color: white;
+}
+
+.message-popup.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* User Cards Layout */
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  grid-template-rows: repeat(2, auto); /* 2 cards per column */
+  gap: 20px; /* space between cards */
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination button:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination button.active:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .sorting-container select,
+.dark-mode .search-container input,
+.dark-mode .pagination button {
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+}
+
+.dark-mode .pagination button:hover {
+  background-color: #555;
+}
+
+/* Dark Mode Active Pagination Button */
+.dark-mode .pagination button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.dark-mode .user-cards {
+  color: #000; 
+}
+
+/* Dark Mode Text Color */
+.dark-mode .sorting-container label,
+.dark-mode .search-container input,
+.dark-mode .search-container button,
+.dark-mode .message-popup,
+.dark-mode .pagination button {
+  color: white;
+}
+/* Dark mode styles for the heading */
+.dark-mode .dark-mode-heading {
+  color: white;
+}
+.dark-mode .toggle-btn {
+  color: white;
+}
+
+
+@media (max-width: 1024px) {
+  .user-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+  }
+
+  .sorting-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-cards {
+    grid-template-columns: 1fr; /* 1 card per row for small screens */
+  }
+
+  .sorting-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pagination button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .message-popup {
+    font-size: 14px;
+  }
+}
+

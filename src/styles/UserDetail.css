@@ -1,0 +1,62 @@
+.user-detail-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-detail {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-detail h2 {
+  text-align: center;
+  color: #333;
+}
+
+.user-detail p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.user-detail p strong {
+  color: #007bff;
+}
+@media (max-width: 768px) {
+  .user-detail-page {
+    padding: 15px;
+  }
+
+  .user-detail {
+    padding: 15px;
+  }
+
+  .user-detail h2 {
+    font-size: 22px;
+  }
+
+  .user-detail p {
+    font-size: 14px;
+  }
+}
+
+/* Further Adjustments for Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .user-detail-page {
+    padding: 10px;
+  }
+
+  .user-detail {
+    padding: 10px;
+  }
+
+  .user-detail h2 {
+    font-size: 20px;
+  }
+
+  .user-detail p {
+    font-size: 12px;
+  }
+}
